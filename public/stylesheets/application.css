@@ -27,11 +27,13 @@ div {
 .jokes-title {
   background: blue;
   color: white;
+  padding: 0;
+  margin: 0;
 }
 .jokes-title h1 {
   font-weight: normal;
-}
-.jokes-title h1 {
+  padding: 0;
+  margin: 0;
   font-size: medium;
   text-align: center;
 }
@@ -51,6 +53,14 @@ div {
   padding-left: 42px;
 
   height: 42px;
+}
+.joke-list .joke-item a, .joke-list .joke-item a:visited {
+  text-decoration: none;
+  color: black;
+}
+.joke-list .joke-item a:hover {
+  text-decoration: none;
+  color: #710070;
 }
 
 .clear {
