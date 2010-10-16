@@ -18,6 +18,7 @@ role :db,  "173.255.195.81", :primary => true
 namespace :deploy do
   desc "Restarting mod_rails with restart.txt"
   task :restart, :roles => :app, :except => { :no_release => true } do
+    run "cd #{current_path}; bundle install"
     run "touch #{current_path}/tmp/restart.txt"
   end
 end
