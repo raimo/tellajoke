@@ -12,12 +12,7 @@
 
 <% @jokes.each do |joke| %>
   <tr>
-    <td><%= joke.body %></td>
-    <td><%= joke.points %></td>
-    <td><%= joke.user_id %></td>
-    <td><%= link_to 'Show', joke %></td>
-    <td><%= link_to 'Edit', edit_joke_path(joke) %></td>
-    <td><%= link_to 'Destroy', joke, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to short_body(joke.body), joke %></td>
   </tr>
 <% end %>
 </table>
