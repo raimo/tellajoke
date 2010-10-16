@@ -4,7 +4,7 @@ class VotesController < ApplicationController
     if vote.valid?
       flash.now[:notice] = 'Your vote was cast successfully!'
     else
-      flash.now[:error] = 'Sorry, you can vote only once a day.'
+      flash.now[:error] = 'Sorry, but you can vote one joke only once per day.'
     end
 
     if params[:joke_content]
