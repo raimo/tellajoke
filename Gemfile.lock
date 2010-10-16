@@ -36,6 +36,8 @@ GEM
       abstract (>= 1.0.0)
     eventmachine (0.12.10)
     i18n (0.4.1)
+    jquery-rails (0.2.1)
+      rails (~> 3.0.0)
     mail (2.2.6.1)
       activesupport (>= 2.3.6)
       mime-types
@@ -75,6 +77,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  jquery-rails
   rails (= 3.0.0)
   sqlite3-ruby
   thin
