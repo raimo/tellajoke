@@ -8,7 +8,8 @@ class JokesControllerTest < ActionController::TestCase
   test "should get index" do
     get :index
     assert_response :success
-    assert_not_nil assigns(:jokes)
+    assert_not_nil assigns(:best_jokes)
+    assert_not_nil assigns(:new_jokes)
   end
 
   test "should get new" do

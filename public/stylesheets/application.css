@@ -4,7 +4,8 @@ textarea {
 }
 
 div {
-  border: 1px solid red;
+/*  border: 1px solid red;
+ */
 }
 
 #container {
@@ -19,6 +20,8 @@ div {
   margin-right: auto;
   width: 80%;
   padding: 0;
+  border: 1px solid black;
+  overflow: auto;
 }
 
 .jokes-title {
