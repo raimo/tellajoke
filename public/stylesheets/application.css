@@ -164,10 +164,9 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   text-decoration: none;
   text-align: center;
   font-size: 15pt;
-  height:100%;
-  width:100%;
   display:block;
   padding-top: 40px;
+  outline: none;
 }
 
 
