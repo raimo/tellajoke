@@ -7,9 +7,13 @@
     = @week
     jokes
 .joke-list
-  = render :partial => 'jokes/joke', :collection => @best_jokes
-.joke-list
+  .joke-title
+    Newest
   = render :partial => 'jokes/joke', :collection => @new_jokes
+.joke-list
+  .joke-title
+    Best of the week
+  = render :partial => 'jokes/joke', :collection => @best_jokes
 
 %script
   $(document).ready(function() { $('.joke-list .joke-item').voteCircle({hotList : '#joke-container'}); });

@@ -48,6 +48,12 @@ div {
   margin-right: auto;
 }
 
+.joke-title {
+  height: 42px;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 2px;
+}
 .joke-item {
   height: 42px;
 }
