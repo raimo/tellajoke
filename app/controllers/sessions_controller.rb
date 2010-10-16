@@ -1,7 +1,6 @@
 require 'rpx'
 
 class SessionsController < ApplicationController
-  extend Rpx
   skip_before_filter :verify_authenticity_token, :only => [:create]
 
 
@@ -9,7 +8,7 @@ class SessionsController < ApplicationController
   end
 
   def create
-    rpx = RpxHelper.new('d2ddd35ee36abe7b494ad8dd684d1c4275d422c0',
+    rpx = Rpx::RpxHelper.new('d2ddd35ee36abe7b494ad8dd684d1c4275d422c0',
                   'https://rpxnow.com',
                   'tellajoke.rpxnow.com')
     resp = rpx.auth_info(params[:token])
