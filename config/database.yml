@@ -19,6 +19,7 @@ production:
   adapter: postgresql
   host: localhost
   database: tellajoke
+  password: tellajoke
   pool: 5
   schema_search_path: public
   encoding: utf8
