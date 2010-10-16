@@ -1,3 +1,10 @@
+GIT
+  remote: http://github.com/arsduo/koala.git
+  revision: 0d70d9420c043a851a899081a0ae0e4fd2f80720
+  specs:
+    koala (0.9.1)
+      json
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -35,9 +42,11 @@ GEM
     erubis (2.6.6)
       abstract (>= 1.0.0)
     eventmachine (0.12.10)
+    haml (3.0.21)
     i18n (0.4.1)
     jquery-rails (0.2.1)
       rails (~> 3.0.0)
+    json (1.4.6)
     mail (2.2.6.1)
       activesupport (>= 2.3.6)
       mime-types
@@ -77,7 +86,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  haml
   jquery-rails
+  koala!
   rails (= 3.0.0)
   sqlite3-ruby
   thin

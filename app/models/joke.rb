@@ -1,6 +1,7 @@
 class Joke < ActiveRecord::Base
-  default_scope :order => 'created_at desc'
   MAX_LENGTH = 300
+  MAX_COUNT = 8
+  default_scope :order => 'created_at desc', :limit => MAX_COUNT
 
   validates_length_of :body, :maximum => 300
   validates_presence_of :body
