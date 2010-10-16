@@ -10,6 +10,7 @@ gem 'thin'
 gem 'jquery-rails'
 gem 'capistrano'
 gem 'haml'
+gem 'postgres'
 git 'http://github.com/arsduo/koala.git' do 
   gem 'koala'
 end
