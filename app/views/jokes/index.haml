@@ -4,8 +4,11 @@
   jokes
 
 
-.joke-list
-  = render :partial => 'joke', :collection => @jokes
+#joke-container
+  .joke-list
+    = render :partial => 'joke', :collection => @best_jokes
+  .joke-list
+    = render :partial => 'joke', :collection => @new_jokes
 
 .controls
   .button
