@@ -15,6 +15,9 @@ role :web, "173.255.195.81"
 role :db,  "173.255.195.81", :primary => true
 
 
-task :restart, :roles => :app, :except => { :no_release => true } do
-  run "touch #{current_path}/tmp/restart.txt"
+namespace :deploy do
+  desc "Restarting mod_rails with restart.txt"
+  task :restart, :roles => :app, :except => { :no_release => true } do
+    run "touch #{current_path}/tmp/restart.txt"
+  end
 end
