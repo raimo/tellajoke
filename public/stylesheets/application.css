@@ -68,18 +68,43 @@ div {
 }
 
 .controls {
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 50px;
+  width: 80%;
 }
 
 .controls .button {
-  width: 200px;
-  height: 150px;
-  color: white;
+  width: 150px;
+  height: 120px;
+  border-radius: 15px;
+  -moz-border-radius: 15px;
+  -moz-box-shadow: 5px 5px 5px #aaa;
+  -webkit-box-shadow: 5px 5px 5px #aaa;
+  box-shadow: 5px 5px 5px #aaa;
   background-color: blue;
 }
-.controls .button {
-  width: 200px;
-  height: 150px;
-  color: white;
+
+.controls .button:hover {
+  width: 150px;
+  height: 120px;
+  border-radius: 15px;
+  -moz-border-radius: 15px;
+  -moz-box-shadow: 2px 2px 2px #555;
+  -webkit-box-shadow: 2px 2px 2px #555;
+  box-shadow: 2px 2px 2px #555;
   background-color: blue;
+  cursor: pointer;
 }
+
+.controls .button a {
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  font-size: 15pt;
+  height:100%;
+  width:100%;
+  display:block;
+  padding-top: 40px;
+}
+
