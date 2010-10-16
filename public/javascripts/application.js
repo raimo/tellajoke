@@ -7,6 +7,8 @@ cache: false
 
 $(document).ready(function() {
     $('textarea').autogrow();
+    $('input[placeholder],textarea[placeholder]').placeholder();
+    $('textarea').maxlength( {maxCharacters: 300} );
 });
 
 

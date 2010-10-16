@@ -19,7 +19,7 @@ class JokesController < ApplicationController
     @joke = Joke.new(params[:joke])
 
     if @joke.save
-      redirect_to(jokes_path, :notice => 'Joke was successfully told.')
+      redirect_to(root_path, :notice => 'Joke was successfully told.')
     else
       render :action => "new"
     end
