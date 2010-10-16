@@ -1,5 +1,5 @@
 textarea {
-  height: 100px;
+  height: 338px;
   width: 100%;
   font-size: 14pt;
 }
@@ -27,6 +27,7 @@ div {
 }
 
 #joke-container {
+  min-height: 410px;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
@@ -102,7 +103,17 @@ div {
   margin-left: auto;
   margin-right: auto;
   margin-top: 50px;
-  width: 100%;
+  max-width: 1024px;
+  padding-top: 15px;
+  height: 140px;
+  overflow:hidden;
+  padding-left: 100px;
+  padding-right: 100px;
+  border-radius: 15px;
+  -moz-border-radius: 15px;
+  -moz-box-shadow: 5px 5px 5px #aaa;
+  -webkit-box-shadow: 5px 5px 5px #aaa;
+  background-color: white;
 }
 
 button::-moz-focus-inner,
@@ -126,7 +137,8 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   text-align: center;
   font-size: 15pt;
   float: left;
-  margin-right: 50px;
+  margin-right: 25px;
+  margin-left: 25px;
 }
 
 .controls .button:hover, .controls .button:active {
@@ -147,7 +159,8 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   text-align: center;
   font-size: 15pt;
   outline: none;
-  margin-right: 50px;
+  margin-right: 25px;
+  margin-left: 25px;
 }
 .controls .cancel, .controls .cancel:active, .controls .cancel:hover {
   background-color: gray;
@@ -182,9 +195,10 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   font-size: 15pt;
   display:block;
   padding-top: 40px;
+  margin-bottom: -40px;
   outline: none;
   width: 100%;
-  height: 100%;
+  height: 80px;
 }
 
 
@@ -229,8 +243,17 @@ input:placeholder, textarea:placeholder {
   color:#999999;
 }
 
+.teller-row .position {
+  width: 30px;
+  height: 30px;
+  float:left;
+  font-size: 12pt;
+  text-align: right;
+  margin-right: 5px;
+  padding-right: 10px;
+}
 .teller-row .name {
-  width: 850px;
+  width: 800px;
   height: 30px;
   float:left;
   font-size: 12pt;

@@ -1,5 +1,3 @@
-%h1
-  Tell A Joke!
 = form_for(@joke) do |f|
   - if @joke.errors.any?
     #error_explanation
@@ -14,6 +12,5 @@
   .clear
   .controls
     = f.submit('Send', :class => 'button half')
-  .controls
     .button.cancel.half
       = link_to('Back', root_path)
