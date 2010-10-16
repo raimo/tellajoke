@@ -4,8 +4,6 @@ Tellajoke::Application.routes.draw do
   root :to => "jokes#index"
 
 
-  match "/jokes" => redirect("/")
-
   resources :jokes do
     collection do
       get :hotlist
