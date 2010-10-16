@@ -10,8 +10,9 @@ class Vote < ActiveRecord::Base
   private
 
   def only_one_answer_per_day
-    if Vote.find_by_ip(self.ip, :order => 'created_at desc').created_at.today?
-      self.errors.add(:base, 'Sorry, but you can answer only once per day.')
+    last_vote = Vote.find_by_ip_and_joke_id(self.ip, self.joke_id, :order => 'created_at desc')
+    if last_vote and last_vote.id != self.id and last_vote.created_at.today?
+      self.errors.add(:base, 'Sorry, but you can vote one joke only once per day.')
     end
   end
 
