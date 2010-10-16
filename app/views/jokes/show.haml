@@ -2,18 +2,14 @@
 #joke-container
   .jokes-title
     %h1
-      This joke was told
-      -unless @joke.teller.blank?
-        ="by #{@joke.teller}"
-      on
-      = @joke.created_at.to_s(:short)
+      =@title="This joke was told#{@joke.teller.blank? ? '' : " by #{@joke.teller}"} on #{@joke.created_at.to_s(:short)}"
   .joke-body
     -@joke.body.split("\n").each do |line|
       %p
         =line
   .clear
 
-.joke-item.controls
+.joke-item
   .image.vote-circle{ :title => 'Click'}
   .double-line
     Vote for this joke
