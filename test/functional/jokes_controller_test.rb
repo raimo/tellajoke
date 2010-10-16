@@ -16,12 +16,30 @@ class JokesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should create joke" do
+  test "should create joke of length 300" do
+    body = '-'*Joke::MAX_LENGTH
     assert_difference('Joke.count') do
-      post :create, :joke => @joke.attributes
+      post :create, :joke => @joke.attributes.merge(:body => body)
     end
 
     assert_redirected_to joke_path(assigns(:joke))
+    assert_equal body, Joke.last(:order => 'created_at').body
+  end
+
+  test "should not create joke of length 301" do
+    body = '-'*Joke::MAX_LENGTH+'-'
+    assert_no_difference('Joke.count') do
+      post :create, :joke => @joke.attributes.merge(:body => body)
+    end
+    assert_response :success
+  end
+
+  test "should not create joke with no body" do
+    body = ''
+    assert_no_difference('Joke.count') do
+      post :create, :joke => @joke.attributes.merge(:body => body)
+    end
+    assert_response :success
   end
 
   test "should show joke" do
