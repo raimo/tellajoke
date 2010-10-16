@@ -10,11 +10,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101016020452) do
+ActiveRecord::Schema.define(:version => 20101016093516) do
 
   create_table "jokes", :force => true do |t|
     t.text     "body"
-    t.integer  "points"
+    t.integer  "points",     :default => 0, :null => false
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"

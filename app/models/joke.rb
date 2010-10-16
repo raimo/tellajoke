@@ -3,4 +3,6 @@ class Joke < ActiveRecord::Base
 
   validates_length_of :body, :maximum => 300
   validates_presence_of :body
+  attr_protected :points, :user_id
+
 end
