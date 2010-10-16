@@ -9,6 +9,8 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'thin'
 gem 'jquery-rails'
 gem 'capistrano'
+gem 'postgres'
+gem 'pg'
 gem 'haml'
 gem 'postgres'
 git 'http://github.com/arsduo/koala.git' do 
