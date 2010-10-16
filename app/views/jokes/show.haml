@@ -1,5 +1,7 @@
 .joke-body
-  =@joke.body
+  -@joke.body.split("\n").each do |line|
+    %p
+      =line
 
 .controls
   .button.cancel
