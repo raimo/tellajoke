@@ -4,7 +4,6 @@ set :repository,  "git@github.com:raimo-t/tellajoke.git"
 set :branch, "master"
 
 set :user, 'tellajoke'
-set :password, 'telljuhaniapetrijoke'
 
 set :use_sudo, false
 set :deploy_to, "/home/#{application}"
