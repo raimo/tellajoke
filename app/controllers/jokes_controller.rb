@@ -8,6 +8,9 @@ class JokesController < ApplicationController
 
   def show
     @joke = Joke.find(params[:id])
+    unless @joke.to_param == params[:id]
+      raise ActionController::RoutingError.new('Not found')
+    end
   end
 
   def new

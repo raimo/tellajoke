@@ -3,6 +3,7 @@
 
 $(document).ready(function() {
     $('textarea').autogrow();
+    $('.joke-list .joke-item').voteCircle();
 });
 
 

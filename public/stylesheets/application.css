@@ -48,19 +48,22 @@ div {
 }
 
 .joke-list .joke-item {
-  background-image: url(/images/circle.png);
-  background-repeat: no-repeat;
-  padding-left: 42px;
-
   height: 42px;
+}
+.joke-list .joke-item img {
+  float:left;
 }
 .joke-list .joke-item a, .joke-list .joke-item a:visited {
   text-decoration: none;
   color: black;
+  display: block;
 }
 .joke-list .joke-item a:hover {
   text-decoration: none;
   color: #710070;
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .clear {
