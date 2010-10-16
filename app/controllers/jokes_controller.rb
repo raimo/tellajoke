@@ -1,8 +1,8 @@
 class JokesController < ApplicationController
 
   def index
-    @best_jokes = Joke.all(:conditions => ['created_at BETWEEN ? AND ?', Date.today.beginning_of_week, Date.today.end_of_week])
-    @new_jokes = Joke.all
+    @best_jokes = Joke.all(:conditions => ['created_at BETWEEN ? AND ?', Date.today.beginning_of_week, Date.today.end_of_week], :order => 'points desc')
+    @new_jokes = Joke.all(:conditions => ['created_at BETWEEN ? AND ?', Date.today.beginning_of_week, Date.today.end_of_week])
     @week = Date.today.cweek
   end
 

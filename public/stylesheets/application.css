@@ -1,0 +1,72 @@
+textarea {
+  height: 50px;
+  width: 100%;
+}
+
+div {
+  border: 1px solid red;
+}
+
+#container {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  width: 80%;
+}
+
+#joke-container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  padding: 0;
+}
+
+.jokes-title {
+  background: blue;
+  color: white;
+}
+.jokes-title h1 {
+  font-weight: normal;
+}
+.jokes-title h1 {
+  font-size: medium;
+  text-align: center;
+}
+
+.joke-list {
+  float: left;
+  width: 49%;
+  padding: 0;
+  padding-left: 2px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.joke-list .joke-item {
+  background-image: url(/images/circle.png);
+  background-repeat: no-repeat;
+  padding-left: 42px;
+
+  height: 42px;
+}
+
+.clear {
+  clear: both;
+}
+
+.controls {
+  margin-top: 50px;
+}
+
+.controls .button {
+  width: 200px;
+  height: 150px;
+  color: white;
+  background-color: blue;
+}
+.controls .button {
+  width: 200px;
+  height: 150px;
+  color: white;
+  background-color: blue;
+}
