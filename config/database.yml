@@ -16,7 +16,11 @@ test:
   timeout: 5000
 
 production:
-  adapter: sqlite3
-  database: db/production.sqlite3
+  adapter: postgresql
+  host: localhost
+  database: tellajoke
   pool: 5
+  schema_search_path: public
+  encoding: utf8
   timeout: 5000
+  template: template0

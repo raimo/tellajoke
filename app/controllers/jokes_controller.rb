@@ -1,14 +1,7 @@
 class JokesController < ApplicationController
 
   def index
-    @best_jokes = Joke.all(:conditions => ['created_at BETWEEN ? AND ?', Date.today.beginning_of_week, Date.today.end_of_week], :order => 'points desc')
-    @new_jokes = Joke.all(:conditions => ['created_at BETWEEN ? AND ?', Date.today.beginning_of_week, Date.today.end_of_week])
-    @week = Date.today.cweek
-  end
-
-  def hotlist
-    index
-    render :partial => 'hotlist'
+    fetch_hotlist
   end
 
   def show

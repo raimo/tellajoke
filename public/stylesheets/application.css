@@ -50,8 +50,15 @@ div {
 .joke-list .joke-item {
   height: 42px;
 }
-.joke-list .joke-item img {
+.joke-list .joke-item .image {
+  background-image: url(/images/circle.png);
+  height: 42px;
+  width: 42px;
   float:left;
+}
+.joke-list .joke-item .image:hover {
+  background-image: url(/images/circle_yellow.png);
+  cursor: pointer;
 }
 .joke-list .joke-item a, .joke-list .joke-item a:visited {
   text-decoration: none;
@@ -151,16 +158,18 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   display:none;
   background:url(/images/tooltip.png);
   padding:4px 3px 1px 3px;
-  height:30px;
-  width:100px;
+  height:20px;
+  width:82px;
   font-size:11px;
   color:#fff;
+  border: 1px solid black;
 }
 
 /* a .label element inside tooltip */
 .tooltip .label {
   color:yellow;
   width:35px;
+  font-weight:bold;
 }
 
 .tooltip a {

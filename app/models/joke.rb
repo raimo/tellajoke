@@ -13,4 +13,5 @@ class Joke < ActiveRecord::Base
     "#{self.id}-#{body[0..40].gsub(/[^a-zA-Z_ ]/, '').gsub(' ','-')}"
   end
 
+
 end

@@ -1,11 +1,12 @@
 class VotesController < ApplicationController
   def cast
     if Joke.find(params[:joke_id]).votes.create(:ip => request.remote_ip)
-      flash.now[:notice] = 'Your vote was cast successfully!'
+      flash[:notice] = 'Your vote was cast successfully!'
     else
-      flash.now[:error] = 'Sorry, you can vote only once a day.'
+      flash[:error] = 'Sorry, you can vote only once a day.'
     end
 
-    redirect_to hotlist_jokes_path
+    fetch_hotlist
+    render :partial => 'jokes/hotlist'
   end
 end

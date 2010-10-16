@@ -1,12 +1,15 @@
+= render :partial => 'shared/flash_messages'
+
+
 .jokes-title
   %h1
     Week
     = @week
     jokes
 .joke-list
-  = render :partial => 'joke', :collection => @best_jokes
+  = render :partial => 'jokes/joke', :collection => @best_jokes
 .joke-list
-  = render :partial => 'joke', :collection => @new_jokes
+  = render :partial => 'jokes/joke', :collection => @new_jokes
 
 %script
   $(document).ready(function() { $('.joke-list .joke-item').voteCircle({hotList : '#joke-container'}); });
