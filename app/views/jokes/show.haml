@@ -1,10 +1,16 @@
 
-.joke-body
-  -@joke.body.split("\n").each do |line|
-    %p
-      =line
+#joke-container
+  .jokes-title
+    %h1
+      This joke was told on
+      = @joke.created_at.to_s(:short)
+  .joke-body
+    -@joke.body.split("\n").each do |line|
+      %p
+        =line
+  .clear
 
-.joke-item
+.joke-item.controls
   .image.vote-circle{ :title => 'Click'}
   Vote for this joke
   = link_to('', @joke)

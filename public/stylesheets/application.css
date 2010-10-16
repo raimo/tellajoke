@@ -50,6 +50,10 @@ div {
 .joke-item {
   height: 42px;
 }
+.joke-list .joke-item:hover a {
+  color: red !important;
+  outline: none;
+}
 .joke-item .image {
   background-image: url(/images/circle.png);
   height: 42px;
