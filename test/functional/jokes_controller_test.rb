@@ -65,21 +65,4 @@ class JokesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should get edit" do
-    get :edit, :id => @joke.to_param
-    assert_response :success
-  end
-
-  test "should update joke" do
-    put :update, :id => @joke.to_param, :joke => @joke.attributes
-    assert_redirected_to joke_path(assigns(:joke))
-  end
-
-  test "should destroy joke" do
-    assert_difference('Joke.count', -1) do
-      delete :destroy, :id => @joke.to_param
-    end
-
-    assert_redirected_to jokes_path
-  end
 end
