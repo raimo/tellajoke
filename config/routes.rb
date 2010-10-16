@@ -4,9 +4,12 @@ Tellajoke::Application.routes.draw do
   root :to => "jokes#index"
 
   resources :jokes do
+    collection do
+      get :hotlist
+    end
     resources :votes do
       collection do
-        get 'create'
+        get 'cast'
       end
     end
   end

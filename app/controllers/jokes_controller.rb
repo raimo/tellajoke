@@ -6,6 +6,11 @@ class JokesController < ApplicationController
     @week = Date.today.cweek
   end
 
+  def hotlist
+    index
+    render :partial => 'hotlist'
+  end
+
   def show
     @joke = Joke.find(params[:id])
     unless @joke.to_param == params[:id]

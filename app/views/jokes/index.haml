@@ -1,15 +1,7 @@
 
 
 #joke-container
-  .jokes-title
-    %h1
-      Week
-      = @week
-      jokes
-  .joke-list
-    = render :partial => 'joke', :collection => @best_jokes
-  .joke-list
-    = render :partial => 'joke', :collection => @new_jokes
+  = render :partial => 'hotlist'
 
 .clear
 .controls
