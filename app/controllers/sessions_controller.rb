@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
   def new
   end
 
-  def authenticate
+  def create
     rpx = RpxHelper.new('d2ddd35ee36abe7b494ad8dd684d1c4275d422c0',
                   'https://rpxnow.com',
                   'tellajoke.rpxnow.com')
