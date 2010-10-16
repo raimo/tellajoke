@@ -1,8 +1,18 @@
+
 .joke-body
   -@joke.body.split("\n").each do |line|
     %p
       =line
 
+.joke-item
+  .image.vote-circle{ :title => 'Click'}
+  Vote for this joke
+  = link_to('', @joke)
+
 .controls
   .button.cancel
     = link_to 'Back', jokes_path
+
+%script
+  $(document).ready(function() { $('.joke-item').voteCircle({jokeContent : '.joke-body:first'}); });
+

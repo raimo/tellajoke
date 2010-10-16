@@ -47,25 +47,25 @@ div {
   margin-right: auto;
 }
 
-.joke-list .joke-item {
+.joke-item {
   height: 42px;
 }
-.joke-list .joke-item .image {
+.joke-item .image {
   background-image: url(/images/circle.png);
   height: 42px;
   width: 42px;
   float:left;
 }
-.joke-list .joke-item .image:hover {
+.joke-item .image:hover {
   background-image: url(/images/circle_yellow.png);
   cursor: pointer;
 }
-.joke-list .joke-item a, .joke-list .joke-item a:visited {
+.joke-item a, .joke-list .joke-item a:visited {
   text-decoration: none;
   color: black;
   display: block;
 }
-.joke-list .joke-item a:hover {
+.joke-item a:hover {
   text-decoration: none;
   color: #710070;
   display: block;

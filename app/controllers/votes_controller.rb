@@ -7,7 +7,11 @@ class VotesController < ApplicationController
       flash.now[:error] = 'Sorry, you can vote only once a day.'
     end
 
-    fetch_hotlist
-    render :partial => 'jokes/hotlist'
+    if params[:joke_content]
+      render :partial => 'shared/flash_messages'
+    else
+      fetch_hotlist
+      render :partial => 'jokes/hotlist'
+    end
   end
 end
