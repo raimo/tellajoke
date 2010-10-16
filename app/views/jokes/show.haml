@@ -2,7 +2,10 @@
 #joke-container
   .jokes-title
     %h1
-      This joke was told on
+      This joke was told
+      -unless @joke.teller.blank?
+        ="by #{@joke.teller}"
+      on
       = @joke.created_at.to_s(:short)
   .joke-body
     -@joke.body.split("\n").each do |line|

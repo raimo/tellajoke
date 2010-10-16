@@ -8,4 +8,9 @@
   .button
     = link_to 'Tell A Joke!', new_joke_path
   .button
-    = link_to 'Log in using OpenID', new_session_path
+    -if session[:user]
+      = link_to "Log out #{session[:user]['preferredUsername']}", delete_sessions_path
+    -else
+      = link_to 'Log in using OpenID', new_session_path
+  .button
+    = link_to 'Hall of Fame', tellers_path

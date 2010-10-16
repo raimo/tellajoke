@@ -211,3 +211,18 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
 input:placeholder, textarea:placeholder {
   color:#999999;
 }
+
+.teller-row .name {
+  width: 850px;
+  height: 30px;
+  float:left;
+  font-size: 12pt;
+}
+.teller-row .points {
+  font-size: 12pt;
+  height: 30px;
+  width: 50px;
+  float:right;
+  padding-right: 10px;
+  text-align: right;
+}

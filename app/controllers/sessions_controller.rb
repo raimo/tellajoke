@@ -12,12 +12,20 @@ class SessionsController < ApplicationController
                   'https://rpxnow.com',
                   'tellajoke.rpxnow.com')
     resp = rpx.auth_info(params[:token])
-    if resp and resp[:identifier]
-      flash[notice] = "You logged in as #{resp[:preferredUsername]} successfully!"
+    p resp
+    if resp and resp['identifier']
+      session[:user] = resp
+      flash[:notice] = "You logged in as #{resp['preferredUsername']} successfully!"
       redirect_to root_path
     else
       render :action => 'new'
     end
     
+  end
+
+  def delete
+    reset_session
+    flash[:notice] = "You logged out successfully!"
+    redirect_to root_path
   end
 end

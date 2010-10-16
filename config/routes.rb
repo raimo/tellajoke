@@ -1,5 +1,10 @@
 Tellajoke::Application.routes.draw do
-  resources :sessions
+  resources :tellers
+  resources :sessions do
+    collection do
+      get :delete
+    end
+  end
   resources :votes
 
   root :to => "jokes#index"

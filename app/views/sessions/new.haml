@@ -1,4 +1,4 @@
-%iframe{ :src => "http://tellajoke.rpxnow.com/openid/embed?token_url=http%3A%2F%2Ftellajoke.r10.railsrumble.com%2Fsessions",
+%iframe{ :src => "http://tellajoke.rpxnow.com/openid/embed?token_url=#{ RAILS_ENV=='production' ? 'http%3A%2F%2Ftellajoke.r10.railsrumble.com%2Fsessions' : 'http%3A%2F%2Flocalhost:3000%2Fsessions' }",
          :scrolling => "no",
          :frameBorder => "no",
          :allowtransparency => "true",
