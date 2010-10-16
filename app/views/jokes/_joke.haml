@@ -1,6 +1,6 @@
 .joke-item
   .image.vote-circle{ :title => 'Click'}
 
-  -short_body(joke.body).split("\n")[0..1].map do |line|
+  -joke.body.split("\n")[0..1].map do |line|
     .line
-      =link_to(line, joke)
+      =link_to(short_body(line), joke)
