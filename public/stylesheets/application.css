@@ -12,13 +12,13 @@ div {
   margin-left: auto;
   margin-right: auto;
   margin-top: 100px;
-  width: 80%;
+  width: 66%;
 }
 
 #joke-container {
   margin-left: auto;
   margin-right: auto;
-  width: 80%;
+  width: 100%;
   padding: 0;
   border: 1px solid black;
   overflow: auto;
@@ -71,11 +71,19 @@ div {
   margin-left: auto;
   margin-right: auto;
   margin-top: 50px;
-  width: 80%;
+  width: 100%;
+}
+
+button::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+input[type="file"] > input[type="button"]::-moz-focus-inner {
+      border: none;
 }
 
 .controls .button {
-  width: 150px;
+  width: 200px;
   height: 120px;
   border-radius: 15px;
   -moz-border-radius: 15px;
@@ -83,10 +91,19 @@ div {
   -webkit-box-shadow: 5px 5px 5px #aaa;
   box-shadow: 5px 5px 5px #aaa;
   background-color: blue;
+  color: white;
+  text-align: center;
+  font-size: 15pt;
+  float: left;
+  margin-right: 50px;
 }
 
-.controls .button:hover {
-  width: 150px;
+.controls .button:hover, .controls .button:active {
+
+  position:relative;
+  top:0;
+  left:0;
+  width: 200px;
   height: 120px;
   border-radius: 15px;
   -moz-border-radius: 15px;
@@ -95,9 +112,26 @@ div {
   box-shadow: 2px 2px 2px #555;
   background-color: blue;
   cursor: pointer;
+  color: white;
+  text-align: center;
+  font-size: 15pt;
+  outline: none;
+  margin-right: 50px;
+}
+.controls .cancel, .controls .cancel:active, .controls .cancel:hover {
+  background-color: gray;
 }
 
-.controls .button a {
+.controls .button:active, .controls .button a:active {
+  -moz-box-shadow:inset 0 0 5px #555;
+  -webkit-box-shadow:inset 0 0 5px #555;
+  box-shadow:inset 0 0 5px #555;
+  outline: none;
+}
+
+
+
+.controls .button a, .controls .button input {
   color: white;
   text-decoration: none;
   text-align: center;

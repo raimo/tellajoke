@@ -1,19 +1,19 @@
 %h1
   Tell A Joke
 = form_for(@joke) do |f|
-  = if @joke.errors.any?
+  - if @joke.errors.any?
     #error_explanation
-      %h2
-        = pluralize(@joke.errors.count, "error")
-        prohibited this joke from being saved:
-
       %ul
-        = @joke.errors.full_messages.each do |msg|
+        - @joke.errors.each do |field, error|
           %li
-            = msg
+            =field
+            =error
 
   .field
-    = f.label :body
     = f.text_area :body, :rows => 3, :cols => 100
-  .actions
-    = f.submit
+  .clear
+  .controls
+    = f.submit('Send', :class => 'button half')
+  .controls
+    .button.cancel.half
+      = link_to('Back', jokes_path)
