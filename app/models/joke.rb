@@ -1,7 +1,6 @@
 class Joke < ActiveRecord::Base
   MAX_LENGTH = 300
   MAX_COUNT = 8
-  default_scope :order => 'created_at desc', :limit => MAX_COUNT
 
   has_many :votes
 
