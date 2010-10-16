@@ -1,4 +1,8 @@
 Tellajoke::Application.routes.draw do
+  root :to => "jokes#index"
+
+  resources :jokes
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
