@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
 
 
   def new
-    session[:return_url] = params[:return_url] unless params[:return_url].nil?
+    session[:return_url] = params[:return_url]
     oauth = Koala::Facebook::OAuth.new(FB_APP_ID, FB_SECRET, URI.escape(create_session_url))
     @facebook_url = oauth.url_for_oauth_code
     p @facebook_url

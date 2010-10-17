@@ -1,11 +1,15 @@
-.show-new-comment
-  -if params[:new_comment]
+-if params[:new_comment]
+  .show-new-comment
+  .new-comment
     =render :partial => 'comments/new', :object => Comment.new
-  -else
+-else
+  .show-new-comment
     =link_to("Give a comment!", new_joke_comment_path(@joke), :class => 'new-comment-button button')
-.new-comment
+  .new-comment
 =render :partial => 'comments/comment', :collection => @joke.comments
 
 
+%script
+  $('.comments').commenter();
 
 
