@@ -13,6 +13,3 @@ gem 'postgres'
 gem 'pg'
 gem 'haml'
 gem 'postgres'
-git 'http://github.com/arsduo/koala.git' do 
-  gem 'koala'
-end
