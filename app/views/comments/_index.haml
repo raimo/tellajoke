@@ -1,0 +1,9 @@
+.show-new-comment
+  =link_to("Give a comment!", new_joke_comment_path(@joke), :class => 'new-comment-button button')
+  -link_to("Toggle comments", '#', :class => 'toggle-comments')
+.new-comment
+=render :partial => 'comments/comment', :collection => @joke.comments
+
+
+
+

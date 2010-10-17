@@ -4,6 +4,11 @@ textarea {
   font-size: 14pt;
 }
 
+textarea.comment-area {
+  height: 30px;
+  font-size: 10pt;
+}
+
 div {
 /*  border: 1px solid red;
  */
@@ -27,7 +32,9 @@ div {
 }
 
 #joke-container {
-  min-height: 410px;
+/*  min-height: 410px;
+ *  */
+  min-height: 200px;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
@@ -68,7 +75,12 @@ div {
 .joke-item {
   height: 42px;
 }
+.joke-item:hover {
+  cursor: pointer;
+}
 .joke-list .joke-item:hover a {
+  display:block;
+  height: 34px;
   color: red !important;
   outline: none;
 }
@@ -282,4 +294,73 @@ input:placeholder, textarea:placeholder {
 .shadow {
   -moz-box-shadow: 15px 15px 15px #aaa;
   -webkit-box-shadow: 15px 15px 15px #aaa;
+}
+
+.comment-count {
+  color: gray;
+  float: right;
+  padding-bottom:15px;
+}
+.comment-points-field {
+  font-weight: bold;
+}
+.comment-count-field {
+  color: #333;
+}
+
+.comments .comment {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  padding-bottom: 5px;
+  min-height: 60px;
+  border: 2px outset;
+  -moz-box-shadow: 15px 2px 15px #aaa;
+  -webkit-box-shadow: 15px 2px 15px #aaa;
+}
+
+.comment .author {
+  text-indent: 3em;
+  margin-top: 20px;
+}
+
+.comments input, .comments .button {
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -moz-box-shadow: 5px 5px 5px #aaa;
+  -webkit-box-shadow: 5px 5px 5px #aaa;
+  box-shadow: 5px 5px 5px #aaa;
+  border: 2px inset;
+  background-color: blue;
+  color: white;
+  text-align: center;
+  font-size: 8pt;
+  margin-right: 25px;
+  margin-left: 25px;
+  margin-bottom: 20px;
+  text-decoration: none;
+}
+
+.comments .button:active, .comments input:active {
+  border: 5px outset;
+}
+
+.comments input:hover, .comments input:active, .comments .button:hover, .comments .button:active {
+  text-decoration: none;
+  -moz-box-shadow: 5px 5px 5px #666;
+  -webkit-box-shadow: 5px 5px 5px #666;
+  box-shadow: 5px 5px 5px #666;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  background-color: blue;
+  cursor: pointer;
+  color: white;
+  text-align: center;
+  font-size: 8pt;
+  outline: none;
+  margin-right: 25px;
+  margin-left: 25px;
+}
+.comments .show-new-comment {
+  height: 30px;
 }

@@ -1,5 +1,10 @@
-.comment
+.comment.shadow
   .body
-    comment.body
+    =comment.body
   .author
-    comment.author
+    %hr
+    %strong
+      by
+      =comment.author
+      on
+      =comment.created_at.to_s(:short)

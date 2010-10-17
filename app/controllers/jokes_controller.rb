@@ -16,9 +16,7 @@ class JokesController < ApplicationController
   end
 
   def create
-    if session[:user]
-      params[:joke].merge!(:teller => session[:user]['preferredUsername'])
-    end
+    merge_teller(params[:joke])
     @joke = Joke.new(params[:joke])
 
     if @joke.save

@@ -18,10 +18,10 @@
 .clear
 
 .comments
-  -if @joke.comments.count == 0
-    There are no comments so far.
-  -else
-    =link_to("There are #{@joke.comments.count} comments for this joke.", comments_path(@joke))
+  %h2
+    Comments
+  =render :partial => 'comments/index', :object => @joke
+    
     
 
 .controls
