@@ -5,6 +5,7 @@ class SessionsController < ApplicationController
 
 
   def new
+    session[:return_url] = params[:return_url] unless params[:return_url].nil?
   end
 
   def create
@@ -16,7 +17,13 @@ class SessionsController < ApplicationController
     if resp and resp['identifier']
       session[:user] = resp
       flash[:notice] = "You logged in as #{resp['preferredUsername']} successfully!"
-      redirect_to root_path
+      if session[:return_url]
+        return_url = session[:return_url]
+        session[:return_url] = nil
+        redirect_to return_url
+      else
+        redirect_to root_path
+      end
     else
       render :action => 'new'
     end

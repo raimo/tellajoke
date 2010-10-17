@@ -15,7 +15,7 @@ class ApplicationController < ActionController::Base
     if session[:user]
       session[:user]['preferredUsername']
     else
-      "Anonymous (Click <a href='#{new_session_path}'>here</a> to login)".html_safe
+      "Anonymous (Click <a href='#{new_session_path(:return_url => joke_path(:id => params[:joke_id], :new_comment => true))}'>here</a> to login)".html_safe
     end
   end
 
