@@ -28,6 +28,7 @@ div {
   margin-right: auto;
 }
 .logo img {
+  border: 0;
   margin-left: auto;
   margin-right: auto;
   display:block;
@@ -378,4 +379,12 @@ input:placeholder, textarea:placeholder {
 .joke-author {
   font-weight:bold;
   margin:30px -10px 0 1px;
+}
+
+.share-links {
+  margin-top: 14px;
+  float: right;
+}
+.share-links a {
+  float: right;
 }
