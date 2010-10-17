@@ -1,21 +1,11 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
-  helper_method :current_teller
-
   protected
 
   def merge_teller(paramhash)
     if session[:user]
       paramhash.merge!(:teller => session[:user]['preferredUsername'])
-    end
-  end
-
-  def current_teller
-    if session[:user]
-      session[:user]['preferredUsername']
-    else
-      "Anonymous (Click <a href='#{new_session_path(:return_url => joke_path(:id => params[:joke_id], :new_comment => true))}'>here</a> to login)".html_safe
     end
   end
 
