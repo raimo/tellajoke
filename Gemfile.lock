@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/railsrumble/rr10-team-256.git
+  revision: 2470beeb38864585b3139a28b144a1a49f054f39
+  specs:
+    failurous-rails (0.1.6)
+      actionpack (>= 2.3.5)
+      activesupport (>= 2.3.5)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -47,6 +55,8 @@ GEM
     jquery-rails (0.2.1)
       rails (~> 3.0.0)
     json (1.4.6)
+    koala (0.9.1)
+      json
     mail (2.2.6.1)
       activesupport (>= 2.3.6)
       mime-types
@@ -96,9 +106,11 @@ PLATFORMS
 
 DEPENDENCIES
   capistrano
+  failurous-rails!
   haml
   jquery-rails
   json
+  koala
   pg
   postgres
   rails (= 3.0.0)

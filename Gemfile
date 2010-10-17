@@ -14,4 +14,6 @@ gem 'postgres'
 gem 'pg'
 gem 'haml'
 gem 'postgres'
+gem 'koala'
 
+gem 'failurous-rails', :git => 'git://github.com/railsrumble/rr10-team-256.git'
