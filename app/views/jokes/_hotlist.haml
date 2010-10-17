@@ -6,10 +6,12 @@
     =@title = "Week #{@week} jokes"
 .joke-list
   .joke-title
+    =image_tag('circle_title.png', :align => :left)
     Newest jokes
   = render :partial => 'jokes/joke', :collection => @new_jokes
 .joke-list
   .joke-title
+    =image_tag('circle_title.png', :align => :left)
     Best jokes of the week
   = render :partial => 'jokes/joke', :collection => @best_jokes
 
