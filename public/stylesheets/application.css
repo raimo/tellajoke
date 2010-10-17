@@ -199,7 +199,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 }
 
 .joke-body {
-  padding: 50px 15px 33px 40px;
+  padding: 50px 15px 10px 40px;
 }
 .joke-body p {
   padding: 0;
@@ -373,4 +373,9 @@ input:placeholder, textarea:placeholder {
 .description {
   padding: 33px 31px 9px 39px;
   color: gray;
+}
+
+.joke-author {
+  font-weight:bold;
+  margin:30px -10px 0 1px;
 }

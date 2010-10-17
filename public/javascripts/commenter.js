@@ -50,6 +50,7 @@
           return false;
         });
       };
+      initializeFormHandler();
     });
   };
 })(jQuery);

@@ -15,7 +15,7 @@ class CommentsController < ApplicationController
     if @comment.valid?
       render :partial => 'comment', :object => @comment
     else
-      flash.now[:error] = "Please type the message content"
+      flash.now[:error] = "Please type the message content. Maximum length is #{Comment::MAX_CHARS} characters."
       render :partial => 'new', :object => @comment, :status => 203
     end
   end

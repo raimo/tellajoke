@@ -6,6 +6,10 @@
     -@joke.body.split("\n").each do |line|
       %p
         =line
+    .clear
+    .joke-author
+      by
+      =@joke.author
   .clear
 
 .joke-item
