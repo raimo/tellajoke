@@ -3,6 +3,7 @@ class Joke < ActiveRecord::Base
   MAX_COUNT = 8
 
   has_many :votes
+  has_many :comments, :order => 'created_at desc'
 
   validates_length_of :body, :maximum => 300
   validates_presence_of :body

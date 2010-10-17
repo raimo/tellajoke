@@ -10,7 +10,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101016212829) do
+ActiveRecord::Schema.define(:version => 20101017110649) do
+
+  create_table "comments", :force => true do |t|
+    t.text     "body"
+    t.integer  "user_id"
+    t.string   "teller"
+    t.integer  "joke_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "comments", ["joke_id"], :name => "index_comments_on_joke_id"
 
   create_table "jokes", :force => true do |t|
     t.text     "body"

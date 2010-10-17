@@ -1,10 +1,3 @@
-GIT
-  remote: http://github.com/arsduo/koala.git
-  revision: 0d70d9420c043a851a899081a0ae0e4fd2f80720
-  specs:
-    koala (0.9.1)
-      json
-
 GEM
   remote: http://rubygems.org/
   specs:
@@ -105,7 +98,7 @@ DEPENDENCIES
   capistrano
   haml
   jquery-rails
-  koala!
+  json
   pg
   postgres
   rails (= 3.0.0)

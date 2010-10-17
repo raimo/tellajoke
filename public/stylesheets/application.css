@@ -105,14 +105,10 @@ div {
   margin-top: 50px;
   max-width: 1024px;
   padding-top: 15px;
-  height: 140px;
+  height: 180px;
   overflow:hidden;
   padding-left: 100px;
   padding-right: 100px;
-  border-radius: 15px;
-  -moz-border-radius: 15px;
-  -moz-box-shadow: 5px 5px 5px #aaa;
-  -webkit-box-shadow: 5px 5px 5px #aaa;
   background-color: white;
 }
 
@@ -129,9 +125,10 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   height: 120px;
   border-radius: 15px;
   -moz-border-radius: 15px;
-  -moz-box-shadow: 5px 5px 5px #aaa;
-  -webkit-box-shadow: 5px 5px 5px #aaa;
-  box-shadow: 5px 5px 5px #aaa;
+  -moz-box-shadow: 15px 15px 15px #aaa;
+  -webkit-box-shadow: 15px 15px 15px #aaa;
+  box-shadow: 15px 15px 15px #aaa;
+  border: 5px inset;
   background-color: blue;
   color: white;
   text-align: center;
@@ -141,7 +138,14 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   margin-left: 25px;
 }
 
+.button:active {
+  border: 5px outset;
+}
+
 .controls .button:hover, .controls .button:active {
+  -moz-box-shadow: 15px 15px 15px #666;
+  -webkit-box-shadow: 15px 15px 15px #666;
+  box-shadow: 15px 15px 15px #666;
 
   position:relative;
   top:0;
@@ -150,9 +154,6 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   height: 120px;
   border-radius: 15px;
   -moz-border-radius: 15px;
-  -moz-box-shadow: 2px 2px 2px #555;
-  -webkit-box-shadow: 2px 2px 2px #555;
-  box-shadow: 2px 2px 2px #555;
   background-color: blue;
   cursor: pointer;
   color: white;
@@ -272,4 +273,13 @@ input:placeholder, textarea:placeholder {
   float:right;
   padding-right: 10px;
   text-align: right;
+}
+
+.radius {
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+}
+.shadow {
+  -moz-box-shadow: 15px 15px 15px #aaa;
+  -webkit-box-shadow: 15px 15px 15px #aaa;
 }

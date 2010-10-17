@@ -10,10 +10,19 @@
   .clear
 
 .joke-item
-  .image.vote-circle{ :title => 'Click'}
+  .image.vote-circle
   .double-line
     Vote for this joke
     = link_to('', @joke)
+
+.clear
+
+.comments
+  -if @joke.comments.count == 0
+    There are no comments so far.
+  -else
+    =link_to("There are #{@joke.comments.count} comments for this joke.", comments_path(@joke))
+    
 
 .controls
   .button.cancel

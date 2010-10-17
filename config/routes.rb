@@ -1,4 +1,5 @@
 Tellajoke::Application.routes.draw do
+
   resources :tellers
   resources :sessions do
     collection do
@@ -19,6 +20,7 @@ Tellajoke::Application.routes.draw do
         get 'cast'
       end
     end
+    resources :comments
   end
 
   # The priority is based upon order of creation:

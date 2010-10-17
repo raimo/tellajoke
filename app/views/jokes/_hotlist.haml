@@ -1,16 +1,16 @@
 = render :partial => 'shared/flash_messages'
 
 
-.jokes-title
+.jokes-title.radius
   %h1
     =@title = "Week #{@week} jokes"
 .joke-list
   .joke-title
-    Newest
+    Newest jokes
   = render :partial => 'jokes/joke', :collection => @new_jokes
 .joke-list
   .joke-title
-    Best of the week
+    Best jokes of the week
   = render :partial => 'jokes/joke', :collection => @best_jokes
 
 %script
