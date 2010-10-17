@@ -38,6 +38,7 @@
   .button.cancel
     = link_to 'Back', root_path
 
+=render :partial => 'shared/flash_messages'
 %script
   $(document).ready(function() { $('.joke-item').voteCircle({jokeContent : '.joke-body:first'}); });
 
