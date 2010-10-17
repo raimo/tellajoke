@@ -22,7 +22,7 @@ class JokesControllerTest < ActionController::TestCase
       post :create, :joke => @joke.attributes.merge(:points => 1000)
     end
 
-    assert_redirected_to root_path
+    assert_response :redirect
     assert_equal 0, Joke.last(:order => 'created_at').points
   end
 
@@ -31,7 +31,7 @@ class JokesControllerTest < ActionController::TestCase
       post :create, :joke => @joke.attributes.merge(:user_id => 1000)
     end
 
-    assert_redirected_to root_path
+    assert_response :redirect
     assert_equal nil, Joke.last(:order => 'created_at').user_id
   end
 
@@ -41,7 +41,7 @@ class JokesControllerTest < ActionController::TestCase
       post :create, :joke => @joke.attributes.merge(:body => body)
     end
 
-    assert_redirected_to root_path
+    assert_response :redirect
     assert_equal body, Joke.last(:order => 'created_at').body
   end
 
