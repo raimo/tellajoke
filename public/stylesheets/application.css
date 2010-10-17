@@ -369,3 +369,8 @@ input:placeholder, textarea:placeholder {
 .comments .show-new-comment {
   height: 30px;
 }
+
+.description {
+  padding: 33px 31px 9px 39px;
+  color: gray;
+}

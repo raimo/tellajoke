@@ -1,11 +1,15 @@
 Tellajoke::Application.routes.draw do
 
   resources :tellers
+
+  match 'sessions/create', :method => :get, :controller => 'sessions', :action => 'create', :as => 'create_session'
+
   resources :sessions do
     collection do
       get :delete
     end
   end
+
   resources :votes
 
   root :to => "jokes#index"
