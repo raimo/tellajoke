@@ -8,6 +8,7 @@ textarea {
 textarea.comment-area {
   height: 30px;
   font-size: 10pt;
+  border: 1px solid black;
 }
 
 div {
@@ -198,9 +199,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 }
 
 .joke-body {
-  padding-top: 50px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 50px 15px 33px 40px;
 }
 .joke-body p {
   padding: 0;
