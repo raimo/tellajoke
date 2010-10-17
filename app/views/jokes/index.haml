@@ -11,6 +11,6 @@
     -if session[:user]
       = link_to "Log out #{session[:user]['preferredUsername']}", delete_sessions_path
     -else
-      = link_to 'Log in using OpenID', new_session_path
+      = link_to 'Log in using OpenID', new_session_path, :class => 'twoline'
   .button
     = link_to 'Hall of Fame', tellers_path

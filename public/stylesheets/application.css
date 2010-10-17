@@ -2,6 +2,7 @@ textarea {
   height: 338px;
   width: 100%;
   font-size: 14pt;
+  border: none;
 }
 
 textarea.comment-area {
@@ -17,7 +18,7 @@ div {
 #container {
   margin-left: auto;
   margin-right: auto;
-  margin-top: 35px;
+  margin-top: 5px;
   max-width: 1024px;
 }
 
@@ -41,6 +42,7 @@ div {
   padding: 0;
   border: 1px solid black;
   overflow: hidden;
+  margin-bottom: 30px;
 }
 
 .jokes-title {
@@ -134,7 +136,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 
 .controls .button {
   width: 200px;
-  height: 120px;
+  height: 110px;
   border-radius: 15px;
   -moz-border-radius: 15px;
   -moz-box-shadow: 15px 15px 15px #aaa;
@@ -163,7 +165,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   top:0;
   left:0;
   width: 200px;
-  height: 120px;
+  height: 110px;
   border-radius: 15px;
   -moz-border-radius: 15px;
   background-color: blue;
@@ -177,6 +179,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 }
 .controls .cancel, .controls .cancel:active, .controls .cancel:hover {
   background-color: gray;
+  height: 100px;
 }
 
 .controls .button:active, .controls .button a:active {
@@ -207,6 +210,9 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 }
 
 
+.controls .button a.twoline, .controls .button input.twoline {
+  padding-top: 28px;
+}
 
 .controls .button a, .controls .button input {
   color: white;

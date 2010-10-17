@@ -1,5 +1,4 @@
-
-#joke-container
+#joke-container.radius.shadow
   .jokes-title
     %h1
       =@title="This joke was told#{@joke.teller.blank? ? '' : " by #{@joke.teller}"} on #{@joke.created_at.to_s(:short)}"
