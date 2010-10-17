@@ -40,7 +40,7 @@ div {
   width: 100%;
   padding: 0;
   border: 1px solid black;
-  overflow: auto;
+  overflow: hidden;
 }
 
 .jokes-title {
@@ -80,7 +80,7 @@ div {
 }
 .joke-list .joke-item:hover a {
   display:block;
-  height: 34px;
+  height: 30px;
   color: red !important;
   outline: none;
 }
