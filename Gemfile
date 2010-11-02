@@ -10,10 +10,10 @@ gem 'thin'
 gem 'json'
 gem 'jquery-rails'
 gem 'capistrano'
-gem 'postgres'
-gem 'pg'
+group :production do
+	gem 'pg'
+end
 gem 'haml'
-gem 'postgres'
 gem 'koala'
 
 gem 'failurous-rails', :git => 'git://github.com/railsrumble/rr10-team-256.git'

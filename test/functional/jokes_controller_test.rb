@@ -23,7 +23,7 @@ class JokesControllerTest < ActionController::TestCase
     end
 
     assert_response :redirect
-    assert_equal 0, Joke.last(:order => 'created_at').points
+    assert_equal 0, Joke.last(:order => 'created_at, id').points
   end
 
   test "should not be able to mass_assign user_id for a joke" do
@@ -32,7 +32,7 @@ class JokesControllerTest < ActionController::TestCase
     end
 
     assert_response :redirect
-    assert_equal nil, Joke.last(:order => 'created_at').user_id
+    assert_equal nil, Joke.last(:order => 'created_at, id').user_id
   end
 
   test "should create joke of length 300" do
@@ -42,7 +42,7 @@ class JokesControllerTest < ActionController::TestCase
     end
 
     assert_response :redirect
-    assert_equal body, Joke.last(:order => 'created_at').body
+    assert_equal body, Joke.last(:order => 'created_at, id').body
   end
 
   test "should not create joke of length 301" do
